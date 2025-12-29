@@ -15,13 +15,15 @@
 }
 
 .light {
-  --text-color: rgb(245, 238, 205);
+  --text-color: #3a021e;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: #310131;
-  --surface-color: rgba(3, 3, 3, 0.05);
-  --surface-color-hover: #460346(200, 200, 200, 0.02);
+  --stroke-color: #f7f4e3;
+  --surface-color: #f7f4e3(3, 3, 3, 0.05);
+  --stroke-color: #f7f4e3;
+  --surface-color-hover: #f7f4e3(200, 200, 200, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/sun.svg);
+  text-shadow: 2px 2px 4px #ffffff;
 }
 
 body {
@@ -45,6 +47,7 @@ body * {
 #profile {
   text-align: center;
   padding: 24px;
+  text-shadow: 2px 2px 4px #ffffff;
 }
 
 #profile img {
@@ -132,7 +135,7 @@ ul li a {
   background: var(--highlight-color);
   text-decoration: none;
   font-weight: 500;
-
+    
   transition: background 0.2s;
 }
 
@@ -160,9 +163,9 @@ ul li a:hover {
   transition: background 0.2s;
 
   a:hover {
-  background: var(--surface-color-hover);
-  border: 1.5px solid var(--text-color);
-}
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+  }
 
   padding: 24px 0;
 
@@ -184,11 +187,12 @@ ul li a:hover {
 
   transition: background 0.2s;
   border-radius: 50%;
+
+  text-shadow: 2px 2px 4px #ffffff;
 }
 
 #social-links a:hover {
   background: var(--highlight-color);
-    
 }
 
 footer {
@@ -206,6 +210,25 @@ footer {
   .light {
     --bg-url: url(./assets/bg-light.jpg);
   }
+  
+  .titulo {
+  font-size: 3rem; /* Tamanho padrão para desktop (telas grandes) */
+}
+
+/* Para telas com largura máxima de 768px (tablets e celulares) */
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 2rem; /* Reduz o tamanho da fonte */
+  }
+}
+
+/* Para telas com largura máxima de 480px (celulares pequenos) */
+@media screen and (max-width: 480px) {
+  .titulo {
+    font-size: 1.5rem; /* Reduz ainda mais */
+  }
+}
+
 }
 
 /* animation */
